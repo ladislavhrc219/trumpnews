@@ -22,9 +22,6 @@ class App extends Component {
       })
     });
   }
-   
-
-  // console.log(articles);
 
   render() {
     console.log(this.state);
@@ -34,12 +31,18 @@ class App extends Component {
         {this.state.articles.map((article) => {
             return(
               <>
+               <hr/>
                 <h1 style={{color:'red'}}> BREAKING NEWS</h1> 
                 <h1> <b> {article.title}</b></h1> 
-                <h2 style={{color:'orange'}}> {article.description} </h2>
-                <img src={article.urlToImage} style={{width:'75vw'}}/>
+                <h3 style={{color:'black'}}> {article.description} </h3>
+                <img src={article.urlToImage} style={{width:'80vw', height: '40vw'}}/>
                 <p> Source: {article.author}</p>
-                <p style={{color:'red'}}> keep reading...</p>
+                <h3> Read the full story here: </h3>
+                <h4> Link:  <a href={article.url}>  {article.url} </a> </h4>   
+                
+                <p> Published at: {article.publishedAt}</p>
+                {/* <p> {article.content}</p>  */}
+                
               </>
             )})}
       </div>
@@ -50,16 +53,3 @@ class App extends Component {
 export default App;
 
 
-
-
-// useEffect(() => {
-//   const fetchPosts = async () => {
-//     setLoading(true);
-//     const articles = await axios.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=ab4415572d7c4b5885bdfd07990e1ffd');
-//     setNewsPosts(articles.data);
-//     setLoading(false);
-
-//   }
-//   fetchPosts();
-
-// }, []);
