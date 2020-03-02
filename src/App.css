@@ -13,9 +13,35 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
+
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.fake-news {
+  padding: 30px;
+  margin: 30px;
+  color: red;
+  background-color: black;
+  text-align: center;
+  font-size: 60px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 6px;
+}
+
+.trump-news {
+  color: red;
+  text-align: center;
+  padding: 1px;
+  margin: 30px;
+  
+}
+.card-titles {
+  font-size: 28px;
+}
+.card-description{
+  font-size: 14px;
+}

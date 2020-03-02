@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 // import axios from 'axios';
 import './App.css';
+
+import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCardTitle, MDBCardImage, MDBCardBody, MDBCardText, MDBBtn } from "mdbreact";
+
+// import { Jumbotron, Button } from 'reactstrap';
 // import Articles from './components/Articles.jsx';
 
 class App extends Component {
@@ -27,23 +31,90 @@ class App extends Component {
     console.log(this.state);
   return (
       // let [articles, setNewsPosts] = useState([]);
+      // <hr></hr>
       <div className="container mt-5">
+        <h1 class="fake-news"> Your favourite FAKE NEWS website</h1>
+        <h1 class="trump-news">The Latest News and Top Stories of President Donald Trump</h1> 
+        {/* <hr></hr> */}
+         
         {this.state.articles.map((article) => {
             return(
-              <>
-               <hr/>
-                <h1 style={{color:'red'}}> BREAKING NEWS</h1> 
-                <h1> <b> {article.title}</b></h1> 
-                <h3 style={{color:'black'}}> {article.description} </h3>
-                <img src={article.urlToImage} style={{width:'80vw', height: '40vw'}}/>
-                <p> Source: {article.author}</p>
-                <h3> Read the full story here: </h3>
-                <h4> Link:  <a href={article.url}>  {article.url} </a> </h4>   
+    <>
+             
+            <hr className="my-4"  />
+              <MDBContainer className="mt-5 text-center  ">
+      <MDBRow>
+        <MDBCol>
+          <MDBJumbotron className="text-center jumbotron ">
+            <MDBCardTitle className="card-title h4 pb-2">
+              <strong> 
+              
+              
+                <h1 className="card-titles"> <b> {article.title}</b></h1> 
+                </strong>
+                <h3 className="card-description"> {article.description} </h3>
+            </MDBCardTitle>
+
+            <MDBCardImage
+              src={article.urlToImage} 
+              className="img-fluid"
+            />
+
+{/* <img src={article.urlToImage} style={{width:'80vw', height: '40vw'}}/> */}
+            <MDBCardBody>
+              
+              <MDBCardText>
+              <h3> Read the full story here: </h3>
+
+              
+              <div className="pt-2">
+                <MDBBtn
+                  color="primary"
+                  // className="waves-effect"
+                  
+                >
+                  <a href={article.url}>   Take me there   </a>
+                 
+                </MDBBtn>
                 
-                <p> Published at: {article.publishedAt}</p>
-                {/* <p> {article.content}</p>  */}
+              </div>
+              
+
+              {/* <h4> Link:  <a href={article.url}>  {article.url} </a> </h4>    */}
                 
-              </>
+                 <p> Published at: {article.publishedAt}</p>
+
+              </MDBCardText>
+              <MDBCardTitle className="indigo-text h5 m-4">
+              <p> Source: {article.author}</p>
+              </MDBCardTitle>
+            </MDBCardBody>
+          </MDBJumbotron>
+        </MDBCol>
+      </MDBRow>
+    </MDBContainer>
+
+    </>
+              // <>
+
+
+              //  <hr/>
+
+             
+               
+              //   <h1 style={{color:'red'}}> BREAKING NEWS</h1> 
+              //   <h1> <b> {article.title}</b></h1> 
+              //   <h3 style={{color:'black'}}> {article.description} </h3>
+
+              //   <img src={article.urlToImage} style={{width:'80vw', height: '40vw'}}/>
+              //   <p> Source: {article.author}</p>
+              //   <h3> Read the full story here: </h3>
+              //   <h4> Link:  <a href={article.url}>  {article.url} </a> </h4>   
+                
+              //   <p> Published at: {article.publishedAt}</p>
+              //   {/* <p> {article.content}</p>  */}
+                
+              // </>
             )})}
       </div>
   )
