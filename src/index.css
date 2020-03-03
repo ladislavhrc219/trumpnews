@@ -31,10 +31,14 @@ background: linear-gradient(to top, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Fir
 
   display: flex;
   justify-content: space-between;
-  /* justify-content: center; */
-  /* display: flex; */
-  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  flex-direction: column; 
+
   
+  /* display: grid; */
+  /* grid-template-columns: 300px; */
+  /* grid-column-gap: 20px; */
 
   /* img-fluid */
   /* box-shadow: 5px 5px blue, 10px 10px red, 15px 15px white; */
