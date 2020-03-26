@@ -2,7 +2,10 @@ import React, {Component} from 'react';
 // import axios from 'axios';
 import './App.css';
 
-import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBCardTitle, MDBCardImage, MDBCardBody, MDBCardText, MDBBtn } from "mdbreact";
+import { MDBJumbotron, MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBCardImage, MDBCardBody, MDBCardText } from "mdbreact";
+import {
+  Button
+} from "reactstrap";
 
 // import { Jumbotron, Button } from 'reactstrap';
 // import Articles from './components/Articles.jsx';
@@ -30,28 +33,21 @@ class App extends Component {
   render() {
     console.log(this.state);
   return (
-      // let [articles, setNewsPosts] = useState([]);
-      // <hr></hr>
+      
       <div className="container mt-5">
-        <h1 class="fake-news"> Your favourite FAKE NEWS website</h1>
+        <h1 class="fake-news bg-warning"> Your favourite FAKE NEWS website</h1>
         <h1 class="trump-news">The Latest News and Top Stories of President Donald Trump</h1> 
-        {/* <hr></hr> */}
          
         {this.state.articles.map((article) => {
             return(
-    <>
-             
-            <hr className="my-4"  />
+    <>  
+            <hr className="my-12"  />
               <MDBContainer className="mt-5 text-center  ">
       <MDBRow>
         <MDBCol>
           <MDBJumbotron className="text-center jumbotron ">
             <MDBCardTitle className="card-title h4 pb-2">
-              <strong> 
-              
-              
-                <h1 className="card-titles"> <b> {article.title}</b></h1> 
-                </strong>
+              <strong><h2> {article.title}</h2></strong>
                 <h3 className="card-description"> {article.description} </h3>
             </MDBCardTitle>
 
@@ -68,16 +64,15 @@ class App extends Component {
 
               
               <div className="pt-2">
-                <MDBBtn
-                  color="primary"
-                  // className="waves-effect"
-                  
-                >
+                <div class="btn btn-primary">
                   <a href={article.url}>   Take me there   </a>
                  
-                </MDBBtn>
+                </div>
+                
                 
               </div>
+
+                      
               
 
               {/* <h4> Link:  <a href={article.url}>  {article.url} </a> </h4>    */}

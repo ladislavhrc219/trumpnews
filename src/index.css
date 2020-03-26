@@ -35,13 +35,6 @@ background: linear-gradient(to top, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Fir
   display: flex;
   flex-direction: column; 
 
-  
-  /* display: grid; */
-  /* grid-template-columns: 300px; */
-  /* grid-column-gap: 20px; */
-
-  /* img-fluid */
-  /* box-shadow: 5px 5px blue, 10px 10px red, 15px 15px white; */
   width: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
